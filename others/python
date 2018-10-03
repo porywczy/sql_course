@@ -1,0 +1,9 @@
+in ubuntu
+  sudo add-apt-repository ppa:deadsnakes/ppa
+    install v. 3.7
+      create venv (e.g. folder env_folder)
+        cd env_folder && source my_env/bin/activate
+          download and install anaconda
+            ./Anaconda3-5.2.0-Linux-x86_64.sh
+              conda install psycopg2 (library to interact with a database in PostgreSQl)
+                run: jupyter notebook
