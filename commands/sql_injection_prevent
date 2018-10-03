@@ -1,0 +1,26 @@
+dangerous:
+  if(web_form input_field)
+    strings concatenation: input to SQL statement
+      SQL batch
+        group of SQL statements, separated by semicolons
+          exp
+            txtUserId = getRequestString("UserId");
+            txtSQL = "SELECT * FROM Users WHERE UserId = " + txtUserId;
+          input:
+            105; DROP TABLE Suppliers
+          result:
+            SELECT * FROM Users WHERE UserId = 105; DROP TABLE Suppliers;
+              run on db in usuall way
+
+prevent:
+  use parameterized SQL queries
+    parameters 
+      added at execution time
+      validated
+
+SELECT STATEMENT (ASP.NET):
+  txtUserId = getRequestString("UserId"); //web_form input
+  sql = "SELECT * FROM Customers WHERE CustomerId = @0";  //sql string in closed form; only parameters can be set
+  command = new SqlCommand(sql);  // sql_string > sql_command; validation?
+  command.Parameters.AddWithValue("@0",txtUserID);  //  set parameter's value
+  command.ExecuteReader();  //  execute_sql
