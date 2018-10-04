@@ -1,0 +1,10 @@
+char(n)
+varchar(n)
+serial = int; auto populated
+float(n);
+  n<=8 bytes
+real == float(8) [double]
+numeric(p,s)
+  p - digits
+  s - number after decimal point
+date, time, timestamp, interval, timestampt
