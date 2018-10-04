@@ -1,0 +1,13 @@
+pg_dump
+  directory-format archive
+  The tar archive format currently does not support compression at all.
+  here: 9.5.1
+pg-restore
+  --host localhost 
+  --port 5433 
+  --username "username" 
+  --dbname "dbname" 
+  --no-password  
+  --verbose "*.tar"
+  
+expected: Process returned exit code 0.
