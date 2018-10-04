@@ -1,5 +1,0 @@
-pk - column/s to uniqueli identyfy row in t1 (referenced, parent)
-  if(pk) > unique_index
-fk - as above; in table (referencing, child) that refers to t1_pk
-  mulitiples fk allowed
-  keep referential integrity (spojnosc odniesienia)
